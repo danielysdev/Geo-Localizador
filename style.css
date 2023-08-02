@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import "./header.css";
+
 #map{
-    height: 220px;
+    height: 265px;
     
+}
+
+:root{
+    --font:Rubik;
+}
+
+*{
+    font-family: var(--font);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./img/pattern-bg-desktop.png);
 }
