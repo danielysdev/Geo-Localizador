@@ -1,3 +1,32 @@
+/*
 .header{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+*/
 
+.inBut{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.input{
+    width: 300px;
+    height: 40px;
+    border-radius:  10px 0 0 10px;
+}
+
+.button{
+    width: 100px;
+    height: 46px;
+    background-image: url(./img/favicon-32x32.png);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: var(--white);
 }
