@@ -29,7 +29,11 @@ const searchIP = (event) => {
         locationIP.innerText = res.location.city;
         timezone.innerText = res.location.timezone;
         isp.innerText = res.isp;
-    
+        
+        const container= L.DomUtil.get('map');
+        if (container != null) {
+            container._leaflet_id = null;
+        }
     
     
         let map = L.map('map').setView([res.location.lat, res.location.lng], 13);
@@ -38,6 +42,21 @@ const searchIP = (event) => {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+
+
+        L.marker([res.location.lat, res.location.lng], {
+            icon: L.icon({
+              iconUrl: './img/icon-location.svg',
+              iconSize: [46, 56],
+              iconAnchor: [12, 12],
+              popupAnchor: [0, 0]
+            })
+          }).addTo(map);
+
+
+        /*
+        L.marker([res.location.lat, res.location.lng]).addTo(map)
+        */
     })
     
     
