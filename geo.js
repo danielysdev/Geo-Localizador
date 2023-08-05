@@ -19,7 +19,7 @@ const searchIP = (event) => {
         return resultData;
     }
     
-    //para agregar el valor del imput se agrega el ${inputIp.value},se quito el calor que tenia el link de la pag web que era 8.8.8.8 y cambia la comilla por la que parece el acento invertido
+    //para agregar el valor del imput se agrega el ${inputIp.value},se quito el valor que tenia el link de la pag web que era 8.8.8.8 y cambia la comilla por la que parece el acento invertido
     https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_9jNbggiMVS8t2uUdShPbMNgRWarMb&ipAddress=8.8.8.8
 
     geoApi(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_9jNbggiMVS8t2uUdShPbMNgRWarMb&ipAddress=${inputIP.value}`)
@@ -60,9 +60,6 @@ const searchIP = (event) => {
         L.marker([res.location.lat, res.location.lng]).addTo(map)
         */
     })
-    
-    
-    
     
     
     .catch((err) => console.log(err));
