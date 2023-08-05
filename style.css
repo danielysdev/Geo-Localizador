@@ -34,3 +34,19 @@ body{
     padding: 0;
     background-image: url(./img/pattern-bg-desktop.png);
 }
+
+@media (max-width: 767px) {
+    #map{
+        /*height: 448px;*/
+        position: relative;
+        height: 330px;
+        z-index: 0;
+        top: 120px;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url(./img/pattern-bg-desktop.png);
+    }
+}

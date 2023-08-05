@@ -30,7 +30,8 @@ const searchIP = (event) => {
         timezone.innerText = res.location.timezone;
         isp.innerText = res.isp;
         
-        const container= L.DomUtil.get('map');
+        //actualizar mapa
+        let container= L.DomUtil.get('map');
         if (container != null) {
             container._leaflet_id = null;
         }
@@ -44,6 +45,7 @@ const searchIP = (event) => {
         }).addTo(map);
 
 
+        //macador de mapa
         L.marker([res.location.lat, res.location.lng], {
             icon: L.icon({
               iconUrl: './img/icon-location.svg',
